@@ -1,25 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AsteroidCollider : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private static int score = 0;
+   
     void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Laser")
         {
             Destroy(gameObject);
+            FindObjectOfType<ScoreScript>().incrementSCore();
+            AsteroidSpawner.increaseDifficulty();
+            score++;
         }
+    }
+
+    public static int getScore()
+    {
+        return score;
     }
 }

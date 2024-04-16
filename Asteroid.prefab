@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1aa64b7e529446fcbfe930db852d60c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: {fileID: 3645077005252060936, guid: d1208a706ff854648a09fb1f591b588f, type: 3}
 --- !u!54 &207099214555490028
 Rigidbody:
   m_ObjectHideFlags: 0
